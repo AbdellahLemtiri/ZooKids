@@ -139,7 +139,7 @@ h2 {
 }
 
 label {
-    font-weight: 600; /* وزن خط متوسط */
+    font-weight: 600;
     display: block;
     margin-top: 15px;
     color: #555;
@@ -150,26 +150,26 @@ input[type="number"],
 select, 
 textarea {
     width: 100%;
-    padding: 12px; /* زيادة في الحجم */
+    padding: 12px; 
     margin-top: 8px;
     border: 1px solid #ddd;
-    border-radius: 8px; /* زوايا مستديرة */
-    box-sizing: border-box; /* للتأكد من أن الـ padding لا يزيد العرض الكلي */
+    border-radius: 8px;
+    box-sizing: border-box;
     transition: border-color 0.3s;
 }
 
 input:focus, select:focus, textarea:focus {
-    border-color: #FFC300; /* تحديد التركيز بلون حيوي */
+    border-color: #FFC300;
     outline: none;
     box-shadow: 0 0 5px rgba(255, 195, 0, 0.4);
 }
 
-/* تطبيق نمط زر الإضافة (Primary Button) على زر النموذج */
+
 .container-form button { 
     margin-top: 30px;
     width: 100%;
-    padding: 14px; /* حجم أكبر */
-    background: #00A86B; /* لون مختلف لتمييزه */
+    padding: 14px;
+    background: #00A86B;
     border: none;
     color: #fff;
     font-size: 1.1em;
