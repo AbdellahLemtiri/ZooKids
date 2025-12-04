@@ -1,3 +1,4 @@
+<
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,13 +22,10 @@
 
         <label>Habitat :</label>
         <select name="habitat" required>
-            <option value="">Sélectionner...</option>
-            <option>Forêt</option>
-            <option>Désert</option>
-            <option>Savane</option>
-            <option>Océan</option>
-        </select>
+           <?php 
 
+            ?>
+        </select>
         <button type="submit">Ajouter</button>
     </form>
 </div>

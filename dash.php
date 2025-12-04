@@ -23,7 +23,7 @@
     <div class="card card-habitat">
         <div class="icon-placeholder icon-habitat">🌴</div> <h3>Habitats</h3>
         <p>Gérez les environnements : Ajouter / Modifier / Supprimer</p>
-        <a href="ajouter_habitat.html" class="btn btn-primary">🏡 Ajouter un habitat</a>
+        <a href="ajoute_habitat.php" class="btn btn-primary">🏡 Ajouter un habitat</a>
         <a href="liste_habitat.php" class="btn btn-secondary">🌍 Liste des habitats</a>
     </div>
 

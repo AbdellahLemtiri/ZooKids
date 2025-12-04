@@ -1,5 +1,7 @@
-<?php
 
+
+<?php
+include "connect.php";
 $sql = "SELECT * FROM  habitat ";
 $RSULT = $connect -> query($sql);
 
