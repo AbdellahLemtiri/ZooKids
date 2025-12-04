@@ -37,7 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($connect->query($sql) === TRUE) {
         echo "<p>Habitat ajouté avec succès.</p>";
-    } else {
+    }
+    else {
         echo "<p>Erreur SQL: " . $connect->error . "</p>";
     }
 }

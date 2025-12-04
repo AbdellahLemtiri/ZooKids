@@ -1,5 +1,25 @@
 <?php
-include "connect.php";
+
+
+include "connect.php"; 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nom = $_POST["nom"];
+    $type_alimentaire = $_POST["type_alimentaire"];
+    $url_image = $_POST["url_image"];
+   $habitat = $_POST["habitat"];
+    $sql = "INSERT INTO Animal (NomAnimal, Type_alimentaire, Url_image, IdHab) VALUES ($nom,$type_alimentaire,$url_image,$habitat)";
+
+    if ($stmt->execute()) {
+        echo "<script>alert(' ajoute avec succes');</script>";
+    } else {
+        echo "<script>alert('probleme de l'ajoute  " . $stmt->error . "');</script>";
+    }
+
+   
+    $stmt->close();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,29 +35,40 @@ include "connect.php";
     <div class="container-form">
         <h2>Ajouter un Animal</h2>
 
-        <form method="post" action="#">
+        <form method="post" action="">
             <label>Nom de l'animal :</label>
             <input type="text" name="nom" required>
+
+            <label>Type d'alimentation :</label>
+            <select name="type_alimentaire" required>
+                <option value="">Sélectionner...</option>
+                <option value="Carnivore">Carnivore</option>
+                <option value="Herbivore">Herbivore </option>
+                <option value="Omnivore">Omnivore </option>
+            </select>
+            
+            <label>Image de l'animal (Url/Fichier) :</label>
+            <input type="text" name="url_image" placeholder="Ex: lion.png" required>
+
 
             <label>Espèce :</label>
             <input type="text" name="espece" required>
 
-            <label>Âge :</label>
-            <input type="number" name="age" required>
-
             <label>Habitat :</label>
             <select name="habitat" required>
                 <?php
-                $sql = "SELECT NomHab,IdHab FROM habitat";
-                $RSULT = $connect->query($sql);
+                $sql_habitat = "SELECT NomHab, IdHab FROM Habitat";
+                $result_habitat = $connect->query($sql_habitat);
 
-                if ($RSULT->num_rows > 0) {
-                    while ($row = $RSULT->fetch_assoc()) {
-
-                        echo "<option value=" . $row["IdHab"] . " >" . $row["NomHab"] . "</option>";
+                echo "<option value=''>Sélectionner...</option>";
+                
+                if ($result_habitat->num_rows > 0) {
+                    while ($row = $result_habitat->fetch_assoc()) {
+            
+                        echo "<option value=\"" . $row["IdHab"] . "\">" . $row["NomHab"] . "</option>";
                     }
                 } else {
-                    echo "<option value =0 >" . "Aucun habitat trouvé" . "</option>";
+                    echo "<option value=\"\">Aucun habitat trouvé</option>";
                 }
                 ?>
             </select>
