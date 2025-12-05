@@ -68,7 +68,6 @@
         </div>
       </a>
 
-      <!-- Habitats -->
       <a href="liste_habitat.php" class="group block transform transition hover:-translate-y-2">
         <div class="bg-white rounded-3xl shadow-xl overflow-hidden h-full flex flex-col">
           <div class="h-48 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuADT-EUSJ0NamPq_8vSpYGYERHsVTna76xfAP0FxTU2ds4PwW30OFmy6bQSfJCy2FYGQ5sbH5PusCLtXLHnzU-hrrmd88zLca_oF0OBaNiW4bVUT1ucsRcua2m46P-WDaL9Eh_Q0torUoIaKDzvuk5QChChKgtvvxM5owpPWF11cJ071p99V7BE1HbREkYmi7Vc7RCTo1Ak-pJXBOAr4jdLB4oyZ7rO9zcPUjyfnPAGHMolQ4ZvTPZhnFrKUHFItrdwRGy4YxkAMts')"></div>

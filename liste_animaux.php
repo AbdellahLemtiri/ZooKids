@@ -69,10 +69,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
 
       <?php
-     $sql = "SELECT Animal.*, Habitat.NomHab 
-        FROM Animal 
-        LEFT JOIN Habitat ON Animal.IdHab = Habitat.IdHab 
-        WHERE 1=1";
+     $sql = "SELECT Animal.*, Habitat.NomHab FROM Animal LEFT JOIN Habitat ON Animal.IdHab = Habitat.IdHab  WHERE 1=1";
 
 if (!empty($_POST["search"])) {
     $hab = $connect->real_escape_string($_POST["search"]);
