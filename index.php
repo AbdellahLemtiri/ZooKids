@@ -32,7 +32,6 @@
 
 <body class="bg-gradient-to-br from-sky-50 to-white font-sans min-h-screen flex flex-col">
 
-  <!-- Mobile Top Bar -->
   <div class="sticky top-0 bg-white/95 backdrop-blur shadow-md z-50">
     <div class="flex items-center justify-between px-5 py-4">
       <div class="flex items-center gap-3">
@@ -51,10 +50,8 @@
    
   </div>
 
-  <!-- Main Content -->
   <main class="flex-1 px-5 pt-6 pb-28 max-w-6xl mx-auto w-full">
     
-    <!-- Cartes twal (vertical rectangle) -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
       
