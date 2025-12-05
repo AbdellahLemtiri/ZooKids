@@ -80,7 +80,7 @@
         <span class="material-symbols-outlined text-3xl">cruelty_free</span>
         <span class="text-xs">Animals</span>
       </a>
-      <a href="liste_habitat.php" class="flex flex-col items-center text-gray-600">
+      <a href="#" class="flex flex-col items-center text-gray-600">
         <span class="material-symbols-outlined text-3xl">forest</span>
         <span class="text-xs">Habitats</span>
       </a>

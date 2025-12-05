@@ -130,7 +130,7 @@ $result = $connect->query($sql);
         <span class="material-symbols-filled text-3xl">dashboard</span>
         <span class="text-xs font-bold">Home</span>
       </a>
-      <a href="liste_animaux.php" class="flex flex-col items-center text-gray-600">
+      <a href="#" class="flex flex-col items-center text-gray-600">
         <span class="material-symbols-outlined text-3xl">cruelty_free</span>
         <span class="text-xs">Animals</span>
       </a>
