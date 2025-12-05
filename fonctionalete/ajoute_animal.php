@@ -1,7 +1,7 @@
 <?php
 include "connect.php"; 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset( $_POST["nom"])&& isset($_POST["habitat"])) {
 
     $nom = $_POST["nom"];
     $type_alimentaire = $_POST["type_alimentaire"];
@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </form>
 
   <div class="text-center mt-4">
-    <a href="liste_animaux.php" class="text-green-600 hover:underline text-sm">← Retour</a>
+    <a href="../liste_animaux.php" class="text-green-600 hover:underline text-sm">← Retour</a>
   </div>
 </div>
 

@@ -26,7 +26,7 @@
             <span class="material-symbols-filled text-4xl text-green-600"></span>
             <h1 class="text-xl font-bold text-green-600">Habitats</h1>
         </div>
-        <a href="ajoute_habitat.php" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow transition">
+        <a href="fonctionalete/ajoute_habitat.php" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow transition">
             + Ajouter
         </a>
     </div>
@@ -42,8 +42,8 @@
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 $id   = $row['IdHab'];
-                $nom  = htmlspecialchars($row['NomHab']);
-                $desc = htmlspecialchars($row['Description_Hab']);
+                $nom  = $row['NomHab'];
+                $desc = $row['Description_Hab'];
         ?>
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
                 <div class="h-40 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
@@ -99,7 +99,5 @@
       </a>
     </div>
 </div>
-
-
 </body>
 </html>

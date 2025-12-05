@@ -1,6 +1,6 @@
 <?php
 include "connect.php";
-
+if(isset($_GET["id"])){
 $id = (int)$_GET["id"];
 $sql = "SELECT * FROM Animal WHERE IdAnimal = $id";
 $result = $connect->query($sql);
@@ -10,6 +10,7 @@ if ($result->num_rows == 0) {
     exit;
 }
 $animal = $result->fetch_assoc();
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -64,12 +65,12 @@ $animal = $result->fetch_assoc();
     </form>
 
     <div class="text-center mt-4">
-        <a href=" ../liste_animaux.php" class="text-green-600 hover:underline text-sm">Retour</a>
+        <a href="../liste_animaux.php" class="text-green-600 hover:underline text-sm">Retour</a>
     </div>
 </div>
 
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset( $_POST["nom"]) && isset($_POST["habitat"])&& isset($_POST["habitat"])) {
     $nom  = $_POST["nom"];
     $type = $_POST["type_alimentaire"];
     $img  = $_POST["url_image"];

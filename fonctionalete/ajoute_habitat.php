@@ -1,15 +1,15 @@
 <?php include "connect.php"; ?>
 
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST["nom"] ) && isset($_POST["description"])) {
     $nom  = $_POST["nom"];
     $desc = $_POST["description"];
 
-    $sql = "INSERT INTO Habitat (NomHab, Description_Hab) VALUES ('$nom', '$desc')";
+    $sql = "INSERT INTO Habitat (NomHab,Description_Hab) VALUES ('$nom', '$desc')";
 
-    if ($connect->query($sql) === TRUE) {
+    if ($connect->query($sql) == TRUE) {
         echo "<script>alert('Habitat ajouté !');</script>";
-        header(" location: ../liste_habitat.php");
+        header("location: ../liste_habitat.php");
     } 
     else {
         echo "<script>alert('Erreur');</script>";
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h2 class="text-2xl font-bold text-green-600">Nouvel Habitat</h2>
     </div>
 
-    <form method="post" class="space-y-4">
+    <form method="POST" class="space-y-4">
 
         <input type="text" name="nom" placeholder="Nom de l'habitat" required
                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-green focus:outline-none text-base">
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 
      <div class="text-center mt-4">
-        <a href="liste_habitat.php" class="text-green-600 hover:underline text-sm">Retour</a>
+        <a href="../liste_habitat.php" class="text-green-600 hover:underline text-sm">Retour</a>
     </div>
 </div>
 

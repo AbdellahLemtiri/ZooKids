@@ -39,7 +39,7 @@
       <h1 class="text-xl font-bold text-green">Mes Animaux</h1>
     </div>
 
-    <a href="ajoute_animal.php" 
+    <a href="fonctionalete/ajoute_animal.php" 
        class="bg-green hover:bg-emerald-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow transition">
       + Ajouter
     </a>

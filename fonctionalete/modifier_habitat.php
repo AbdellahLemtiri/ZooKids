@@ -1,5 +1,6 @@
 <?php 
 include "connect.php";
+if(isset( $_GET["id"])){
 $id = $_GET["id"];
 
 $sql = "SELECT * FROM Habitat WHERE IdHab = $id";
@@ -11,6 +12,7 @@ if ($res->num_rows == 0) {
 }
 
 $habitat = $res->fetch_assoc();
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,13 +37,13 @@ $habitat = $res->fetch_assoc();
 
     <form method="post" class="space-y-4">
 
-        <input type="text" name="nom" value="<?= htmlspecialchars($habitat['NomHab']) ?>" required
+        <input type="text" name="nom" value="<?= $habitat['NomHab'] ?>" required
                placeholder="Nom de l'habitat" 
                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-green focus:outline-none text-base">
 
         <textarea name="description" rows="4" required placeholder="Description..." 
                    class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-green focus:outline-none text-base resize-none">
-<?= htmlspecialchars($habitat['Description_Hab']) ?>
+<?= $habitat['Description_Hab'] ?>
         </textarea>
 
         <button type="submit" 
@@ -56,7 +58,7 @@ $habitat = $res->fetch_assoc();
 </div>
 
 <?php 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset( $_POST['nom']) && isset( $_POST['description'])) {
     $nomhb = $_POST['nom'];
     $desc  = $_POST['description'];
 
@@ -64,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
              SET NomHab='$nomhb', Description_Hab='$desc'
              WHERE IdHab='$id'";
 
-    if ($connect->query($sql2) === TRUE) {
+    if ($connect->query($sql2) == TRUE) {
         echo "<script>alert('Modifié avec succès !');</script>";
         header("location:../liste_habitat.php");
     } else {
