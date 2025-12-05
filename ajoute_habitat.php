@@ -42,4 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<p>Erreur SQL: " . $connect->error . "</p>";
     }
 }
+
+header("location: liste_animaux.php ");
 ?>

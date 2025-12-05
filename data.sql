@@ -14,7 +14,7 @@ CREATE TABLE Animal (
     Type_alimentaire VARCHAR(50) not null,
     Url_image VARCHAR(100) not null,
     IdHab INT NOT NULL,
-    constraint fk_habite FOREIGN KEY (IdHab) REFERENCES Habitat(IdHab),
+    constraint fk_habite FOREIGN KEY (IdHab) REFERENCES Habitat(NomHab),
     constraint ch_typeanimal check (
         Type_alimentaire = "Carnivore" or Type_alimentaire = "Herbivore"  or Type_alimentaire = "Omnivore"
     )

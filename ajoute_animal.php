@@ -18,6 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $connect->close();
+    header("location: liste_animaux.php ");
+
 }
 ?>
 <!DOCTYPE html>
