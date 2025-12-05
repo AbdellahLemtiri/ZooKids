@@ -40,7 +40,7 @@ $habitat = $res->fetch_assoc();
                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-green focus:outline-none text-base">
 
         <textarea name="description" rows="4" required placeholder="Description..." 
-                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-green focus:outline-none text-base resize-none">
+                   class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-green focus:outline-none text-base resize-none">
 <?= htmlspecialchars($habitat['Description_Hab']) ?>
         </textarea>
 
@@ -68,7 +68,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('Modifié avec succès !');</script>";
         header("location:../liste_habitat.php");
     } else {
+
         echo "<script>alert('Erreur : " . $connect->error . "');</script>";
+        
     }
 }
 ?>

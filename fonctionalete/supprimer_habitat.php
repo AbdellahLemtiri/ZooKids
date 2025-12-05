@@ -6,8 +6,11 @@ $res = $connect -> query($sql);
 if($res == TRUE){
  header("location:  ../liste_habitat.php");   
 }
-else{
+
+
+ else{
     echo $id;
-}
+ }
+
 
 ?>

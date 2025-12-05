@@ -1,6 +1,8 @@
 <?php include "fonctionalete/connect.php"; ?>
 <!DOCTYPE html>
 <html lang="fr">
+
+
 <head>
     <meta charset="UTF-8">
     <title>Liste des Habitats - Zoo Kids</title>
@@ -13,6 +15,9 @@
         .material-symbols-filled { font-variation-settings: 'FILL' 1 }
     </style>
 </head>
+
+
+
 <body class="min-h-screen flex flex-col">
 
 <div class="sticky top-0 bg-white border-b border-gray-200 z-50">

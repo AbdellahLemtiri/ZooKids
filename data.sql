@@ -36,17 +36,13 @@ INSERT INTO Animal (NomAnimal, Type_alimentaire, Url_image, IdHab) VALUES
 ('tortue', 'Herbivore', 'https://zoo-assets.com/jungle/tortue.png', 2);
 
 
-SELECT * FROM Habitat;
-SELECT * FROM Animal;
-SELECT * FROM Animal, Habitat WHERE Animal.IdHab = Habitat.IdHab;
 
-SELECT * FROM Animal 
-JOIN Habitat ON Animal.IdHab = Habitat.IdHab 
-WHERE Habitat.NomHab = 'Savane';
 
-SELECT * FROM Animal 
-JOIN Habitat ON Animal.IdHab = Habitat.IdHab 
-WHERE Habitat.NomHab = 'Jungle';
+
+
+
+
+
 
 
 

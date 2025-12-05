@@ -45,13 +45,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <textarea name="description" rows="4" placeholder="Description..." required
                   class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-green focus:outline-none text-base resize-none"></textarea>
 
-        <button type="submit" 
-                class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-xl shadow transition">
+        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-xl shadow transition">
             Ajouter
         </button>
     </form>
 
-    <div class="text-center mt-4">
+     <div class="text-center mt-4">
         <a href="liste_habitat.php" class="text-green-600 hover:underline text-sm">Retour</a>
     </div>
 </div>

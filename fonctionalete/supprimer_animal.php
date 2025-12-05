@@ -10,12 +10,12 @@ if (isset($_GET["id"])) {
         echo "<script>alert('Animal supprimé avec succès');</script>";
 
     } else {
+
         echo "<script>alert('Erreur : " . $connect->error . "');</script>";
 
-
-
-    }
+    } 
   header("location: ../liste_animaux.php");
 
+  
 }
 ?>

@@ -55,6 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <option value="Omnivore">Omnivore</option>
     </select>
 
+
+    
     <input type="url" name="url_image" placeholder="URL image" required
            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-green focus:outline-none text-base">
 

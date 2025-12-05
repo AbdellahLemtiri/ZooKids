@@ -14,12 +14,12 @@ $animal = $result->fetch_assoc();
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Modifier un Animal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
-    <style>
+     <meta charset="UTF-8">
+     <title>Modifier un Animal</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+     <style>
         body { font-family: 'Fredoka', sans-serif; background: #f0f9ff; }
     </style>
 </head>
@@ -46,8 +46,7 @@ $animal = $result->fetch_assoc();
         <input type="text" name="url_image" value="<?= $animal['Url_image'] ?>" 
                placeholder="URL image" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-green focus:outline-none text-base">
 
-        <select name="habitat" required 
-                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-green focus:outline-none text-base">
+        <select name="habitat" required  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-green focus:outline-none text-base">
             <option value="" disabled>Habitat</option>
             <?php
             $habitats = $connect->query("SELECT * FROM Habitat");

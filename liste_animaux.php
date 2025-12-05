@@ -71,10 +71,13 @@
       <?php
      $sql = "SELECT Animal.*, Habitat.NomHab FROM Animal LEFT JOIN Habitat ON Animal.IdHab = Habitat.IdHab  WHERE 1=1";
 
+
 if (!empty($_POST["search"])) {
     $hab = $connect->real_escape_string($_POST["search"]);
     $sql .= " AND Habitat.NomHab LIKE '%$hab%'";
 }
+
+
 if (!empty($_POST["type"])) {
     $type = $connect->real_escape_string($_POST["type"]);
     $sql .= " AND Animal.Type_alimentaire = '$type'";
@@ -148,6 +151,8 @@ $result = $connect->query($sql);
       </a>
     </div>
 </div>
+
+
 
 
 </body>

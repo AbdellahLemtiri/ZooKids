@@ -39,7 +39,7 @@
         <h1 class="text-2xl font-bold text-green">Zoo Kids</h1>
       </div>
       
-      <!-- Language Icon (top right) -->
+      
       <button class="flex items-center gap-2 bg-gray-100 rounded-full px-4 py-2 text-sm font-medium">
         <span class="material-symbols-outlined text-green">language</span>
         <span>English</span>
@@ -81,7 +81,6 @@
         </div>
       </a>
 
-      <!-- Zoo Stats -->
       <a href="statistique.php" class="group block transform transition hover:-translate-y-2">
         <div class="bg-white rounded-3xl shadow-xl overflow-hidden h-full flex flex-col">
           <div class="h-48 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_uRheoRww8gon6nE0IOaiR91-z8QNQlGvtSrVUwEF-3UEm_XIkGYah1LQLsBDudN2jbPusW9LT5NzIuD0P4ZrOOGGNhwiIogFTM1Vw0CpYGkAl2z3ITSoZ80ITS7jR3KYgysxNIhepOLUZiSv8DQZEfFahahXkblpGEoDc1HONIpjnFauUAlk9baJ4YM6iPbsy5-dIV-ppQFf4E7KmlEyOJvDMurYk-RbaPAjXT68qaU_Jh_JRWx4JO_eS_gdjsyJcmahjWjYatU')"></div>
@@ -112,11 +111,10 @@
     </div>
   </main>
 
-  <!-- Bottom Navigation (Mobile) -->
 <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50">
 
     <div class="flex justify-around py-3">
-      <a href="index.php" class="flex flex-col items-center text-green">
+      <a href="#" class="flex flex-col items-center text-green">
         <span class="material-symbols-filled text-3xl">dashboard</span>
         <span class="text-xs font-bold">Home</span>
       </a>
