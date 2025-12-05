@@ -15,7 +15,6 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-<!-- Top Bar صغيرة ونظيفة -->
 <div class="sticky top-0 bg-white border-b border-gray-200 z-50">
     <div class="flex items-center justify-between px-4 py-3">
         <div class="flex items-center gap-3">
@@ -28,7 +27,6 @@
     </div>
 </div>
 
-<!-- Liste des Habitats -->
 <main class="flex-1 px-4 pt-4 pb-24">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
 
