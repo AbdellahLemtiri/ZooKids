@@ -48,15 +48,7 @@
       </button>
     </div>
 
-    <!-- Search Bar m3amra déjà -->
-    <div class="px-5 pb-4">
-      <div class="flex items-center bg-gray-100 rounded-full py-3.5 px-5 shadow-inner">
-        <span class="material-symbols-outlined text-green">search</span>
-        <input type="text" value="Lion, Elephant, Jungle..." 
-               class="bg-transparent outline-none ml-3 flex-1 text-gray-700 font-medium"
-               onfocus="this.value=''" onblur="if(this.value==='') this.value='Lion, Elephant, Jungle...'">
-      </div>
-    </div>
+   
   </div>
 
   <!-- Main Content -->
@@ -66,7 +58,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
       <!-- My Animals -->
-      <a href="my-animals.html" class="group block transform transition hover:-translate-y-2">
+      <a href="liste_animaux.php" class="group block transform transition hover:-translate-y-2">
         <div class="bg-white rounded-3xl shadow-xl overflow-hidden h-full flex flex-col">
           <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800&auto=format&fit=crop&q=80')"></div>
           <div class="p-6 flex-1 flex flex-col">
@@ -80,7 +72,7 @@
       </a>
 
       <!-- Habitats -->
-      <a href="habitats.html" class="group block transform transition hover:-translate-y-2">
+      <a href="liste_habitat.php" class="group block transform transition hover:-translate-y-2">
         <div class="bg-white rounded-3xl shadow-xl overflow-hidden h-full flex flex-col">
           <div class="h-48 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuADT-EUSJ0NamPq_8vSpYGYERHsVTna76xfAP0FxTU2ds4PwW30OFmy6bQSfJCy2FYGQ5sbH5PusCLtXLHnzU-hrrmd88zLca_oF0OBaNiW4bVUT1ucsRcua2m46P-WDaL9Eh_Q0torUoIaKDzvuk5QChChKgtvvxM5owpPWF11cJ071p99V7BE1HbREkYmi7Vc7RCTo1Ak-pJXBOAr4jdLB4oyZ7rO9zcPUjyfnPAGHMolQ4ZvTPZhnFrKUHFItrdwRGy4YxkAMts')"></div>
           <div class="p-6 flex-1 flex flex-col">
@@ -131,11 +123,11 @@
         <span class="material-symbols-filled text-3xl">dashboard</span>
         <span class="text-xs font-bold">Home</span>
       </a>
-      <a href="my-animals.html" class="flex flex-col items-center text-gray-600">
+      <a href="liste_animaux.php" class="flex flex-col items-center text-gray-600">
         <span class="material-symbols-outlined text-3xl">cruelty_free</span>
         <span class="text-xs">Animals</span>
       </a>
-      <a href="habitats.html" class="flex flex-col items-center text-gray-600">
+      <a href="liste_habitat.php" class="flex flex-col items-center text-gray-600">
         <span class="material-symbols-outlined text-3xl">forest</span>
         <span class="text-xs">Habitats</span>
       </a>
