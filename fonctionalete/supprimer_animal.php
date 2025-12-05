@@ -15,7 +15,7 @@ if (isset($_GET["id"])) {
 
 
     }
-  header("location: liste_animaux.php");
+  header("location: ../liste_animaux.php");
 
 }
 ?>

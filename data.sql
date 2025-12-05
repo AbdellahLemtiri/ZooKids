@@ -1,6 +1,5 @@
-create database zoo_enc_db;
-
-use zoo_enc_db;
+CREATE DATABASE zoo_enc_db;
+USE zoo_enc_db;
 
 CREATE TABLE Habitat (
     IdHab INT PRIMARY KEY AUTO_INCREMENT,
@@ -8,60 +7,49 @@ CREATE TABLE Habitat (
     Description_Hab VARCHAR(500) NOT NULL
 );
 
+
 CREATE TABLE Animal (
     IdAnimal INT PRIMARY KEY AUTO_INCREMENT,
     NomAnimal VARCHAR(100) NOT NULL,
-    Type_alimentaire VARCHAR(50) not null,
-    Url_image VARCHAR(100) not null,
+    Type_alimentaire VARCHAR(50) NOT NULL,
+    Url_image VARCHAR(255) NOT NULL,
     IdHab INT NOT NULL,
-    constraint fk_habite FOREIGN KEY (IdHab) REFERENCES Habitat(NomHab),
-    constraint ch_typeanimal check (
-        Type_alimentaire = "Carnivore" or Type_alimentaire = "Herbivore"  or Type_alimentaire = "Omnivore"
+    CONSTRAINT fk_habitat FOREIGN KEY (IdHab) REFERENCES Habitat(IdHab),
+    CONSTRAINT ch_typeanimal CHECK (
+        Type_alimentaire IN ('Carnivore', 'Herbivore', 'Omnivore')
     )
 );
 
-insert into Habitat (NomHab, Description_Hab) value (
-        "Savane",
-        "Une savane est une vaste étendue d'herbes, souvent tropicale, parsemée d'arbres ou d'arbustes clairsemés, et caractérisée par un climat à deux saisons distinctes : une saison humide et une saison sèche"
-    );
-
-insert into Habitat (NomHab, Description_Hab) value (
-        "Jungle",
-        "La jungle est une forêt tropicale humide, dense et luxuriante, caractérisée par une biodiversité exceptionnellement riche et des arbres qui se battent pour la lumière."
-    );
-
-insert into Habitat (NomHab, Description_Hab) value (
-        "Désert",
-        "Un désert est une région durablement très sèche, avec peu de précipitations et une forte évaporation, qui peut être chaude ou froide."
-    );
-
-insert into Habitat (NomHab, Description_Hab) value (
-        "Océan",
-        "Un océan est une vaste étendue d'eau salée qui couvre environ 71 % de la surface de la Terre, formant un système unique et interconnecté"
-    );
-
-insert into Animal (NomAnimal, Type_alimentaire, Url_image, IdHab) value ("lion", "Carnivore", "lion.png", 1);
-
-insert into Animal (NomAnimal, Type_alimentaire, Url_image, IdHab) value ("tigre", "Carnivore", "tigre.png", 1);
-
-insert into Animal (NomAnimal, Type_alimentaire, Url_image, IdHab) value ("zèbre", "Herbivore", "zebre.png", 1);
-
-insert into Animal (NomAnimal, Type_alimentaire, Url_image, IdHab) value ("éléphant", "Herbivore", "Url_image", 1);
-
-insert into Animal (NomAnimal, Type_alimentaire, Url_image, IdHab) value ("pingouin", "Carnivore", "pingouin.png", 2);
-
-insert into Animal (NomAnimal, Type_alimentaire, Url_image, IdHab) value ("panda", "Herbivore", "panda.png", 2);
-
-insert into Animal (NomAnimal, Type_alimentaire, Url_image, IdHab) value ("panda", "Herbivore", "tortue.png", 2);
-
-update Animal set NomAnimal = "lion africain" where IdAnimal = 1;
-update Animal set Url_image = "lion_africain.png" where IdAnimal = 1; 
+INSERT INTO Habitat (NomHab, Description_Hab) VALUES 
+('Savane', 'Une savane est une vaste étendue d''herbes, souvent tropicale, parsemée d''arbres ou d''arbustes clairsemés.'),
+('Jungle', 'La jungle est une forêt tropicale humide, dense et luxuriante, caractérisée par une biodiversité exceptionnelle.'),
+('Désert', 'Un désert est une région très sèche, avec peu de précipitations et une forte évaporation.'),
+('Océan', 'Un océan est une vaste étendue d''eau salée couvrant 71% de la surface de la Terre.');
 
 
-delete from Animal where IdAnimal = 4;    
+INSERT INTO Animal (NomAnimal, Type_alimentaire, Url_image, IdHab) VALUES
+('lion africain', 'Carnivore', 'https://zoo-assets.com/savane/lion_africain.png', 1),
+('tigre', 'Carnivore', 'https://zoo-assets.com/savane/tigre.png', 1),
+('zèbre', 'Herbivore', 'https://zoo-assets.com/savane/zebre.png', 1),
+('pingouin', 'Carnivore', 'https://zoo-assets.com/ocean/pingouin.png', 4),
+('panda', 'Herbivore', 'https://zoo-assets.com/jungle/panda.png', 2),
+('tortue', 'Herbivore', 'https://zoo-assets.com/jungle/tortue.png', 2);
 
-select * from Habitat; 
-select * from Animal,Habitat where Animal.IdHab = Habitat.IdHab;
 
-select * from Animal , habitat where Animal.IdHab = Habitat.IdHab and  habitat.NomHab= "Savane";
-select * from Animal , habitat where Animal.IdHab = Habitat.IdHab and  habitat.NomHab= "Jungle";
+SELECT * FROM Habitat;
+SELECT * FROM Animal;
+SELECT * FROM Animal, Habitat WHERE Animal.IdHab = Habitat.IdHab;
+
+SELECT * FROM Animal 
+JOIN Habitat ON Animal.IdHab = Habitat.IdHab 
+WHERE Habitat.NomHab = 'Savane';
+
+SELECT * FROM Animal 
+JOIN Habitat ON Animal.IdHab = Habitat.IdHab 
+WHERE Habitat.NomHab = 'Jungle';
+
+
+
+
+
+

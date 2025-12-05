@@ -57,7 +57,7 @@
     <!-- Cartes twal (vertical rectangle) -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <!-- My Animals -->
+      
       <a href="liste_animaux.php" class="group block transform transition hover:-translate-y-2">
         <div class="bg-white rounded-3xl shadow-xl overflow-hidden h-full flex flex-col">
           <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800&auto=format&fit=crop&q=80')"></div>
@@ -86,7 +86,7 @@
       </a>
 
       <!-- Zoo Stats -->
-      <a href="stats.html" class="group block transform transition hover:-translate-y-2">
+      <a href="statistique.php" class="group block transform transition hover:-translate-y-2">
         <div class="bg-white rounded-3xl shadow-xl overflow-hidden h-full flex flex-col">
           <div class="h-48 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_uRheoRww8gon6nE0IOaiR91-z8QNQlGvtSrVUwEF-3UEm_XIkGYah1LQLsBDudN2jbPusW9LT5NzIuD0P4ZrOOGGNhwiIogFTM1Vw0CpYGkAl2z3ITSoZ80ITS7jR3KYgysxNIhepOLUZiSv8DQZEfFahahXkblpGEoDc1HONIpjnFauUAlk9baJ4YM6iPbsy5-dIV-ppQFf4E7KmlEyOJvDMurYk-RbaPAjXT68qaU_Jh_JRWx4JO_eS_gdjsyJcmahjWjYatU')"></div>
           <div class="p-6 flex-1 flex flex-col">
@@ -99,8 +99,8 @@
         </div>
       </a>
 
-      <!-- Sound Safari -->
-      <a href="game.html" class="group block transform transition hover:-translate-y-2">
+  
+      <a href="jeux.php" class="group block transform transition hover:-translate-y-2">
         <div class="bg-white rounded-3xl shadow-xl overflow-hidden h-full flex flex-col">
           <div class="h-48 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLUuzzzcuyYkDhPDruwN3wFRkgd_Xi9KeWDP4EnosHNCJEjND4Nrpx1zyfDp-BPjiEwe5JlfbwUQfCpxN-wMktvcMuo_EwA3LID9Je5_JoL-5eGJSJwlijaPltA1zTGucYtIAZYeeYrXfm33WAiJtoVG6SiILgkTiu3m9rJzMP71x-l_baCGZRCH86eKL_A-WmMc1iMRmrhIfA205CQAtW0zTeZLnfrwJ7YWzliwnJ3LtjBUildXPEJCK2-fLjc2gcKa-IuApaQRE')"></div>
           <div class="p-6 flex-1 flex flex-col">
@@ -117,9 +117,10 @@
   </main>
 
   <!-- Bottom Navigation (Mobile) -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50">
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50">
+
     <div class="flex justify-around py-3">
-      <a href="#" class="flex flex-col items-center text-green">
+      <a href="index.php" class="flex flex-col items-center text-green">
         <span class="material-symbols-filled text-3xl">dashboard</span>
         <span class="text-xs font-bold">Home</span>
       </a>
@@ -131,16 +132,15 @@
         <span class="material-symbols-outlined text-3xl">forest</span>
         <span class="text-xs">Habitats</span>
       </a>
-      <a href="stats.html" class="flex flex-col items-center text-gray-600">
+      <a href="statistique.php" class="flex flex-col items-center text-gray-600">
         <span class="material-symbols-outlined text-3xl">bar_chart</span>
-        <span class="text-xs">Stats</span>
+        <span class="text-xs">Statistique</span>
       </a>
-      <a href="game.html" class="flex flex-col items-center text-gray-600">
+      <a href="jeux.php" class="flex flex-col items-center text-gray-600">
         <span class="material-symbols-outlined text-3xl">joystick</span>
-        <span class="text-xs">Games</span>
+        <span class="text-xs">jeux</span>
       </a>
     </div>
-  </div>
-
+</div>
 </body>
 </html>
