@@ -34,7 +34,7 @@ if (!$animal) { echo "<h2 class='text-3xl text-red-600 text-center'>Aucun animal
 
     <h1 class="text-4xl font-bold text-green-700 mb-8">C'est qui ?</h1>
 
-    <img src="<?= htmlspecialchars($animal['Url_image']) ?>" 
+    <img src="<?= $animal['Url_image'] ?>" 
          class="w-full rounded-2xl shadow-xl mb-8 border-4 border-amber-300">
 
     <form method="post" class="space-y-6">
@@ -55,7 +55,7 @@ if (!$animal) { echo "<h2 class='text-3xl text-red-600 text-center'>Aucun animal
         $rep = trim(strtolower($_POST['reponse']));
         $bon = trim(strtolower($animal['NomAnimal']));
 
-        if ($rep == $bon || similar_text($rep, $bon) > strlen($bon)*0.7) {
+        if ($rep == $bon ) {
             $_SESSION['score'] += 10;
             echo "<p class='mt-6 text-4xl text-green-600 font-bold'>Bravo !</p>";
             echo "<p class='text-2xl'>C'est bien <strong>" .$animal['NomAnimal'] . "</strong> !</p>";
