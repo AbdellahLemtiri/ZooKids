@@ -48,7 +48,7 @@
                 <div class="flex gap-3">
                     <a href="modifier_animal.php?id=<?= $row['IdAnimal'] ?>" 
                        class="flex-1 bg-blue-500 text-white py-3 rounded-full font-bold">Modifier</a>
-                    <a href="supprimer_animal.php?id=<?= $row['IdAnimal'] ?>" 
+                    <a href="delet_anim.php?id=<?= $row['IdAnimal'] ?>" 
                        onclick="return confirm('Vraiment supprimer <?= $row['NomAnimal'] ?> ?')"
                        class="flex-1 bg-red-500 text-white py-3 rounded-full font-bold">Supprimer</a>
                 </div>
@@ -56,7 +56,8 @@
         </div>
         <?php
             }
-        } else {
+        }
+        else {
             echo "<p class='text-center text-2xl col-span-4'>Aucun animal pour le moment</p>";
         }
         ?>
